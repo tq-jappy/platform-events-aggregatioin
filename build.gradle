@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
+
+dependencies {
+    compile 'com.force.api:force-wsc:40.1.1'
+    compile 'com.force.api:force-partner-api:40.0.0'
+
+    testCompile 'junit:junit:4.12'
+}
